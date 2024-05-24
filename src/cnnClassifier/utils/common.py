@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from box.exceptions import BoxValueError
 from yaml import safe_load
-from src.mlproject import logger
+from cnnClassifier import logger
 import json
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 from sklearn.model_selection import GridSearchCV
