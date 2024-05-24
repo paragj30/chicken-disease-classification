@@ -11,34 +11,17 @@ list_of_files = [
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/exception.py",
 
-    f"src/{project_name}/components/__init__.py",
-    f"src/{project_name}/components/data_ingestion.py",
-    f"src/{project_name}/components/data_validation.py",
-    f"src/{project_name}/components/data_transformation.py",
-    f"src/{project_name}/components/model_training.py",
-    f"src/{project_name}/components/model_evaluation.py",
-
-    f"src/{project_name}/pipelines/__init__.py",
-    f"src/{project_name}/pipelines/prediction.py",
-    f"src/{project_name}/pipelines/stage_01_data_ingestion.py",
-    f"src/{project_name}/pipelines/stage_02_data_validation.py",
-    f"src/{project_name}/pipelines/stage_03_data_transformation.py",
-    f"src/{project_name}/pipelines/stage_04_model_training.py",
-    f"src/{project_name}/pipelines/stage_05_model_evaluation.py",
+    f"src/{project_name}/constant/__init__.py",
 
     f"src/{project_name}/utils/__init__.py",
     f"src/{project_name}/utils/common.py",
-
-    f"src/{project_name}/config/__init__.py",
-    f"src/{project_name}/config/configuration.py",
-
-    f"src/{project_name}/entity/__init__.py",
-    f"src/{project_name}/entity/config_entity.py",
-
-    f"src/{project_name}/constant/__init__.py",
     
+    "config/config.yaml",
+    "secret.yaml",
+    "params.yaml",
+
     f"research/stage_01_data_ingestion.ipynb",
-    f"research/stage_02_data_validation.ipynb",
+    f"research/stage_02_prepare_base_model.ipynb",
     f"research/stage_03_data_transformation.ipynb",
     f"research/stage_04_model_training.ipynb",
     f"research/stage_05_model_evaluation.ipynb",
@@ -46,14 +29,36 @@ list_of_files = [
     f"research/model_training_experiment.ipynb",
     f"research/trials.ipynb",
 
-    "config/config.yaml",
-    "dvc.yaml",
-    "params.yaml",
-    "schema.yaml",
+    f"src/{project_name}/entity/__init__.py",
+    f"src/{project_name}/entity/config_entity.py",
+
+    f"src/{project_name}/config/__init__.py",
+    f"src/{project_name}/config/configuration.py",
+
+    f"src/{project_name}/components/__init__.py",
+    f"src/{project_name}/components/data_ingestion.py",
+    f"src/{project_name}/components/prepare_base_model.py",
+    f"src/{project_name}/components/data_transformation.py",
+    f"src/{project_name}/components/model_training.py",
+    f"src/{project_name}/components/model_evaluation.py",
+
+    f"src/{project_name}/pipelines/__init__.py",
+    f"src/{project_name}/pipelines/prediction.py",
+    f"src/{project_name}/pipelines/stage_01_data_ingestion.py",
+    f"src/{project_name}/pipelines/stage_02_prepare_base_model.py",
+    f"src/{project_name}/pipelines/stage_03_data_transformation.py",
+    f"src/{project_name}/pipelines/stage_04_model_training.py",
+    f"src/{project_name}/pipelines/stage_05_model_evaluation.py",
+
+
+
     "main.py",
+    "dvc.yaml",
     "app.py",
+
     "setup.py",
     "requirements.txt",
+
     "templates/index.html",
     "templates/results.html",
     "Dockerfile"
