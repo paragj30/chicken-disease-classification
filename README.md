@@ -103,7 +103,7 @@ docker run -d -p 8080:8080 paragj30/chicken-disease-classification-app
 
 4. Open the web browser and copy past the link below:
 ```bash
-127.0.0.1:8080
+127.0.0.1:8080/predict
 ```
 
 
