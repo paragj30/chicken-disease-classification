@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from cnnClassifier.exception import CustomException
 
-from cnnClassifier.constant import *
+from cnnClassifier.constants import *
 from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import (DataIngestionConfig,
                                                 PrepareBaseModelConfig,
@@ -60,7 +60,7 @@ class ConfigurationManager:
 
         return prepare_base_model_config
     
-"""
+
 
     def get_prepare_callback_config(self) -> PrepareCallbacksConfig:
         config = self.config.prepare_callbacks
@@ -78,7 +78,6 @@ class ConfigurationManager:
 
         return prepare_callback_config
     
-
 
     def get_training_config(self) -> TrainingConfig:
         training = self.config.training
@@ -103,8 +102,6 @@ class ConfigurationManager:
         return training_config
     
 
-
-
     def get_validation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
             path_of_model=Path("artifacts/training/model.h5"),
@@ -114,5 +111,3 @@ class ConfigurationManager:
             params_batch_size=self.params.BATCH_SIZE
         )
         return eval_config
-
-      """

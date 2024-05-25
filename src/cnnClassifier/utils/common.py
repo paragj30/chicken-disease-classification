@@ -95,64 +95,6 @@ def load_json(path: Path) -> ConfigBox:
 
 
 @ensure_annotations
-def evaluate_models(X_train, y_train,X_test,y_test,models,param):
-
-    """Evaluate models using GridSearchCV
-
-    Args:
-        path (Path): path to json file
-        X_train: X_train object
-        y_train: X_train object
-        X_test: X_test object
-        y_test: y_test object
-        models: list of models
-        param: dict of hyperparameters of the model.
-
-    Returns:
-        r2_score, MAE, RSME: Evaluation metrics of the model.
-    """
-    try:
-        report_r2 = {}
-        report_mae = {}
-        report_rmse = {}
-
-        for i in range(len(list(models))):
-            model = list(models.values())[i]
-            para=param[list(models.keys())[i]]
-
-            gs = GridSearchCV(model=model,
-                            param_grid=para,
-                            cv=5,
-                            scoring='r2',
-                            error_score='raise',
-                            n_jobs=-1)
-            gs.fit(X_train,y_train)
-
-            model.set_params(**gs.best_params_)
-            model.fit(X_train,y_train)
-
-            y_train_pred = model.predict(X_train)
-            y_test_pred = model.predict(X_test)
-
-            train_r2_score = r2_score(y_train, y_train_pred)
-        
-            test_r2_score = r2_score(y_test, y_test_pred)
-            test_mae = mean_absolute_error(y_test, y_test_pred)
-            test_mse = mean_squared_error(y_test, y_test_pred)
-            test_rmse = np.sqrt(mean_squared_error(y_test, y_test_pred))
-
-            report_r2[list(models.keys())[i]] = test_r2_score
-            report_mae[list(models.keys())[i]] = test_mae
-            report_rmse[list(models.keys())[i]] = test_rmse
-
-        return report_r2, report_mae, report_rmse
-    
-    except Exception as e:
-        CustomException(e, sys)
-
-
-
-@ensure_annotations
 def save_bin(data: Any, path: Path):
     """save binary file
 

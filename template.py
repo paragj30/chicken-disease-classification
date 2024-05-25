@@ -11,7 +11,7 @@ list_of_files = [
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/exception.py",
 
-    f"src/{project_name}/constant/__init__.py",
+    f"src/{project_name}/constants/__init__.py",
 
     f"src/{project_name}/utils/__init__.py",
     f"src/{project_name}/utils/common.py",
@@ -22,8 +22,9 @@ list_of_files = [
 
     f"research/stage_01_data_ingestion.ipynb",
     f"research/stage_02_prepare_base_model.ipynb",
-    f"research/stage_03_model_training.ipynb",
-    f"research/stage_04_model_evaluation.ipynb",
+    f"research/stage_03_prepare_callbacks.ipynb",
+    f"research/stage_04_model_training.ipynb",
+    f"research/stage_05_model_evaluation.ipynb",
     f"research/EDA.ipynb",
     f"research/model_training_experiment.ipynb",
     f"research/trials.ipynb",
@@ -37,6 +38,7 @@ list_of_files = [
     f"src/{project_name}/components/__init__.py",
     f"src/{project_name}/components/data_ingestion.py",
     f"src/{project_name}/components/prepare_base_model.py",
+    f"src/{project_name}/components/prepare_callbacks.py",
     f"src/{project_name}/components/model_training.py",
     f"src/{project_name}/components/model_evaluation.py",
 

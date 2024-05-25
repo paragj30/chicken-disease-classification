@@ -1,9 +1,7 @@
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.prepare_callbacks import PrepareCallback
-from cnnClassifier.components.training import Training
+from cnnClassifier.components.model_training import Training
 from cnnClassifier import logger
-from cnnClassifier.exceptions import CustomException
-import sys
 
 
 
@@ -40,4 +38,6 @@ if __name__ == '__main__':
         obj.main()
         logger.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
     except Exception as e:
-        CustomException(e, sys)
+        logger.exception(e)
+        raise e
+        
