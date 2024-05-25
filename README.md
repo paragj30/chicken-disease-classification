@@ -50,7 +50,7 @@ python app.py
 
 6. Open the web browser and copy past the link below:
 ```bash
-127.0.0.1:8080
+127.0.0.1:8080/predict
 ```
 
 ### DVC Command
