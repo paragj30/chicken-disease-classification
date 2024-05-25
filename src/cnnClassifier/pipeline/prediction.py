@@ -13,7 +13,7 @@ class PredictionPipeline:
     
     def predict(self):
         # load model
-        model = load_model(os.path.join("artifacts","training", "model.h5"))
+        model = load_model(os.path.join("artifacts","model_training", "model.keras"))
 
         imagename = self.filename
         test_image = image.load_img(imagename, target_size = (224,224))
@@ -23,8 +23,8 @@ class PredictionPipeline:
         print(result)
 
         if result[0] == 1:
-            prediction = 'Healthy'
+            prediction = 'Healthy Chicken'
             return [{ "image" : prediction}]
         else:
-            prediction = 'Coccidiosis'
+            prediction = 'Coccidiosis Chicken'
             return [{ "image" : prediction}]
