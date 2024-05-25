@@ -1,5 +1,33 @@
 # This is end-to-end chicken disease classification (Computer Vision) project.
 
+## Technologies Used
+
+[<img target="_blank" src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png" width=170>](https://flask.palletsprojects.com/en/1.1.x/) [<img target="_blank" src="https://number1.co.za/wp-content/uploads/2017/10/gunicorn_logo-300x85.png" width=280>](https://gunicorn.org) [<img target="_blank" src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" width=200>](https://scikit-learn.org/stable/) 
+<p>
+<a><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen" alt="python"/></a>
+<a><img src="https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas"/></a>
+<a><img src="https://img.shields.io/badge/Numpy-777BB4?style=for-the-badge&logo=numpy&logoColor=white" alt="numpy"/></a>
+<a><img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)" alt="docker"/></a>
+<a><img src="https://www.gstatic.com/devrel-devsite/prod/v7b55e5943f9ab80a0423ff6653c19f56a0e5266641f85a6a76aee662b0157d18/tensorflow/images/lockup.svg" alt="Tensorflow"/></a>
+<a><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*BTgU5s8gHI_2I1dfcCVW_Q.png" alt="Azure and AWS"/></a>
+</p>
+
+
+## Problem Statement
+Chickens have several diseases, but if they have coccidiosis, they will die.  
+
+## Goal
+The major goal is to create a model that can accurately predict if a chicken has coccidiosis disease or not. 
+
+## Solution: 
+I used a chicken fecal picture to forecast coccidiosis illness. Based on the fecal pattern, the model will be able to forecast the disease. The model is trained on both healthy and harmful fecal pictures.
+This study focuses on forecasting the coccidiosis disease utilizing an image classification, i.e., transfer learning technique of the deep learning library. Pretrained-Tensorflow/Keras. I'll feed the custom data into the pretrained Tensorflow model to make the forecast.
+
+
+## Demo
+
+![Home Page](./app-results/home-page-chicken.png)
+![Prediction Page](./app-results/predict-chicken.png)
 ## Workflow
 
 1. Update the config.yaml  
