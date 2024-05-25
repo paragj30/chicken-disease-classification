@@ -33,7 +33,7 @@ conda activate venv/
 git clone https://github.com/paragj30/chicken-disease-classification.git
 ```
 
-4. Enter inside the red_wine_quality_prediction folder.
+4. Enter inside the chicken-disease-classification folder.
 ```bash
 cd \chicken-disease-classification
 ```
